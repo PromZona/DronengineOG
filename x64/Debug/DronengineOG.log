@@ -1,3 +1,4 @@
-﻿  main.cpp
-LINK : warning LNK4098: сшсышюЄхър яю єьюыўрэш■ "MSVCRT" яЁюЄштюЁхўшЄ шёяюы№чютрэш■ фЁєушї сшсышюЄхъ; шёяюы№чєщЄх ярЁрьхЄЁ /NODEFAULTLIB:library
-  DronengineOG.vcxproj -> E:\ProjectsPZ\DronengineOG\DronengineOG\x64\Debug\DronengineOG.exe
+﻿  Application.cpp
+  EntryPoint.h
+  Создание кода...
+  DronengineOG.vcxproj -> E:\ProjectsPZ\DronengineOG\DronengineOG\x64\Debug\DronengineOG.lib
