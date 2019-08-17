@@ -24,6 +24,12 @@
     <ClCompile Include="src\DronengineOG\EntryPoint.h">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="src\DronengineOG\initialization.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DronengineOG\Renderer.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\DOG.h">
@@ -33,6 +39,18 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="src\DronengineOG\Application.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DronengineOG\initialization.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DronengineOG\Renderer.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DronengineOG\OpenGL\VertexBuffer.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DronengineOG\OpenGL\VertexArray.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

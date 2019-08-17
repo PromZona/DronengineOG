@@ -9,8 +9,9 @@ int main()
 	app->Run();
 	return 0;
 }
+
 //main code
-/* 
+/*
 int main()
 {
 	GLFWwindow* window;
