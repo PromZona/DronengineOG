@@ -12,4 +12,6 @@ namespace DronengineOG
 
 		GLFWwindow* window;
 	};
+
+	void sizeCallback(GLFWwindow* window, int width, int height);
 }

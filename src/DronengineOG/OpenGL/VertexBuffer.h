@@ -9,7 +9,10 @@ namespace DronengineOG {
 		~VertexBuffer();
 
 		void Bind();
+		void Bind(float* vertices);
 		void UnBind();
 
+	private:
+		unsigned int bufferID;
 	};
 }

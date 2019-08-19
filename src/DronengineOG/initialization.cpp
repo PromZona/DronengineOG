@@ -6,7 +6,7 @@ namespace DronengineOG
 {
 	Initialization::Initialization()
 	{
-		window = NULL;
+		this->window = NULL;
 	}
 
 	Initialization::~Initialization()
@@ -14,23 +14,29 @@ namespace DronengineOG
 
 	}
 
+	void sizeCallback(GLFWwindow* window, int width, int height)
+	{
+		glViewport(0, 0, width, height);
+	}
+
 	void Initialization::init(int windowWidth, int windowHeight, const char* windowName)
 	{		
 		if (!glfwInit())
 			return;
 
-		window = glfwCreateWindow(windowWidth, windowHeight, windowName, NULL, NULL);
-		if (!window)
+		this->window = glfwCreateWindow(windowWidth, windowHeight, windowName, NULL, NULL);
+		if (!this->window)
 		{
 			glfwTerminate();
 			return;
 		}
 
-		glfwMakeContextCurrent(window);
-
-		int version = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
-		std::cout << version << std::endl;
-		glViewport(0, 0, windowWidth, windowHeight);
+		glfwMakeContextCurrent(this->window);
+		glfwSetFramebufferSizeCallback(this->window, sizeCallback);
+		if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+		{
+			std::cout << "Failed to initialize GLAD" << std::endl;
+		}
 	}
 
 }

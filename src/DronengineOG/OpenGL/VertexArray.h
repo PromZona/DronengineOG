@@ -1,7 +1,17 @@
 #pragma once
 #include "../Core.h"
 
-class VertexArray
-{
+namespace DronengineOG {
+	class VertexArray
+	{
+	public:
+		VertexArray();
+		~VertexArray();
 
-};
+		void Bind();
+		void UnBind();
+
+	private:
+		unsigned int arrayID;
+	};
+}

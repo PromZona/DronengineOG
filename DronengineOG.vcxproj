@@ -80,6 +80,10 @@
     <ClCompile Include="src\DronengineOG\Application.cpp" />
     <ClCompile Include="src\DronengineOG\EntryPoint.h" />
     <ClCompile Include="src\DronengineOG\initialization.cpp" />
+    <ClCompile Include="src\DronengineOG\OpenGL\ElementBuffer.cpp" />
+    <ClCompile Include="src\DronengineOG\OpenGL\VertexArray.cpp" />
+    <ClCompile Include="src\DronengineOG\OpenGL\VertexBuffer.cpp" />
+    <ClCompile Include="src\DronengineOG\OpenGL\Shader.cpp" />
     <ClCompile Include="src\DronengineOG\Renderer.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -87,8 +91,10 @@
     <ClInclude Include="src\DronengineOG\Application.h" />
     <ClInclude Include="src\DronengineOG\Core.h" />
     <ClInclude Include="src\DronengineOG\initialization.h" />
+    <ClInclude Include="src\DronengineOG\OpenGL\ElementBuffer.h" />
     <ClInclude Include="src\DronengineOG\OpenGL\VertexArray.h" />
     <ClInclude Include="src\DronengineOG\OpenGL\VertexBuffer.h" />
+    <ClInclude Include="src\DronengineOG\OpenGL\Shader.h" />
     <ClInclude Include="src\DronengineOG\Renderer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
