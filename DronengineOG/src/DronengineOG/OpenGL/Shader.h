@@ -6,6 +6,7 @@ namespace DronengineOG {
 	{
 	public:
 		Shader(const GLchar** shader);
+		Shader(std::string* string);
 		~Shader();
 
 		void CreateProgram(GLenum ShaderType);
@@ -13,10 +14,11 @@ namespace DronengineOG {
 		void Compile();
 		int GetShaderID();
 	private:
-		const GLchar** shader;
+		const GLchar* shader;
 		unsigned int shaderID;
 	};
 
 	int CreateShaderProgram(Shader* vertex, Shader* fragment);
 	int CreateShaderProgram(const GLchar** vertex, const GLchar** fragment);
+	int CreateShaderProgram(std::string vertex, std::string fragment);
 }

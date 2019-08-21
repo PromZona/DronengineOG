@@ -1,7 +1,2 @@
-﻿  Application.cpp
-  Object.cpp
-  ElementBuffer.cpp
-  VertexBuffer.cpp
-  Renderer.cpp
-  Создание кода...
+﻿  Renderer.cpp
   DronengineOG.vcxproj -> E:\ProjectsPZ\DronengineOG\DronengineOG\x64\Debug\DronengineOG.lib

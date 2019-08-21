@@ -2,6 +2,8 @@
 #include "Core.h"
 #include "initialization.h"
 #include "Object.h"
+#include "FileHandler.h"
+
 #include "OpenGL/Shader.h"
 #include "OpenGL/VertexArray.h"
 #include "OpenGL/VertexBuffer.h"

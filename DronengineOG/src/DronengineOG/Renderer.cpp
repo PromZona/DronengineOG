@@ -43,15 +43,14 @@ namespace DronengineOG {
 	{
 		if (shader == 0)
 		{
-			const GLchar* vertexShaderSourceCode[] = { "#version 330 core\n layout(location = 0) in vec3 aPos;\n void main(){\n gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n}" };
-			const GLchar* fragmentShaderSourceCode[] = { "#version 330 core \n out vec4 FragColor; \n void main(){\n FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n}" };
-			shader = CreateShaderProgram(vertexShaderSourceCode, fragmentShaderSourceCode);
+			std::string vertexShader = FileHandler::FileToString("vertex.glsl");
+			std::string fragmentShader = FileHandler::FileToString("fragment.glsl");
+			shader = CreateShaderProgram(vertexShader, fragmentShader);
 		}
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 		glUseProgram(shader);
 		VAO->Bind();
-		//glDrawArrays(GL_TRIANGLES, 0, 6);
 		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 		glfwSwapBuffers(this->OpenGLinit->window);
 		glfwPollEvents();

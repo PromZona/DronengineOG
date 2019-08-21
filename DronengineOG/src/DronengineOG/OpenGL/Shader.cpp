@@ -4,7 +4,13 @@ namespace DronengineOG {
 
 	Shader::Shader(const GLchar** shader)
 	{
-		this->shader = shader;
+		this->shader = *shader;
+		this->shaderID = 0;
+	}
+
+	Shader::Shader(std::string* string)
+	{
+		this->shader = string->c_str();
 		this->shaderID = 0;
 	}
 
@@ -28,7 +34,7 @@ namespace DronengineOG {
 
 	void Shader::Compile()
 	{
-		glShaderSource(this->shaderID, 1, this->shader, NULL);
+		glShaderSource(this->shaderID, 1, &this->shader, NULL);
 		glCompileShader(this->shaderID);
 		int  success;
 		char infoLog[512];
@@ -71,6 +77,37 @@ namespace DronengineOG {
 		char infoLog[512];
 		Shader* vertex = new Shader(vertexS);
 		Shader* fragment = new Shader(fragmentS);
+
+		vertex->CreateProgram(GL_VERTEX_SHADER);
+		fragment->CreateProgram(GL_FRAGMENT_SHADER);
+		vertex->Compile();
+		fragment->Compile();
+		unsigned int shaderProgram;
+		shaderProgram = glCreateProgram();
+		std::cout << "Shader program created =" << shaderProgram << std::endl;
+		glAttachShader(shaderProgram, vertex->GetShaderID());
+		glAttachShader(shaderProgram, fragment->GetShaderID());
+		glLinkProgram(shaderProgram);
+
+		//error check
+		glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
+		if (!success) {
+			glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
+			std::cout << "ERROR::SHADER::PROGRAM::LINKING_FAILED\n" << infoLog << std::endl;
+		}
+
+		delete vertex;
+		delete fragment;
+
+		return shaderProgram;
+	}
+
+	int CreateShaderProgram(std::string vertexS, std::string fragmentS)
+	{
+		int success = 0;
+		char infoLog[512];
+		Shader* vertex = new Shader(&vertexS);
+		Shader* fragment = new Shader(&fragmentS);
 
 		vertex->CreateProgram(GL_VERTEX_SHADER);
 		fragment->CreateProgram(GL_FRAGMENT_SHADER);

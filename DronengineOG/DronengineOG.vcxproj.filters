@@ -45,6 +45,9 @@
     <ClCompile Include="src\DronengineOG\Object.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="src\DronengineOG\FileHandler.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\DOG.h">
@@ -77,5 +80,12 @@
     <ClInclude Include="src\DronengineOG\Object.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="src\DronengineOG\FileHandler.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="x64\Debug\fragment.glsl" />
+    <None Include="x64\Debug\vertex.glsl" />
   </ItemGroup>
 </Project>

@@ -5,6 +5,12 @@ extern DronengineOG::Application* DronengineOG::CreateApplication();
 
 int main()
 {
+	/*
+	char buffer[MAX_PATH];
+	GetModuleFileName(NULL, buffer, MAX_PATH);
+	std::string::size_type pos = std::string(buffer).find_last_of("\\/");
+	std::cout << std::string(buffer).substr(0, pos) << std::endl;
+	*/
 	DronengineOG::Application* app = DronengineOG::CreateApplication();
 	app->Run();
 	return 0;

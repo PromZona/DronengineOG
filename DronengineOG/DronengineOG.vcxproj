@@ -79,6 +79,7 @@
     <ClCompile Include="Dependecies\GLAD\src\glad.c" />
     <ClCompile Include="src\DronengineOG\Application.cpp" />
     <ClCompile Include="src\DronengineOG\EntryPoint.h" />
+    <ClCompile Include="src\DronengineOG\FileHandler.cpp" />
     <ClCompile Include="src\DronengineOG\initialization.cpp" />
     <ClCompile Include="src\DronengineOG\Object.cpp" />
     <ClCompile Include="src\DronengineOG\OpenGL\ElementBuffer.cpp" />
@@ -91,6 +92,7 @@
     <ClInclude Include="src\DOG.h" />
     <ClInclude Include="src\DronengineOG\Application.h" />
     <ClInclude Include="src\DronengineOG\Core.h" />
+    <ClInclude Include="src\DronengineOG\FileHandler.h" />
     <ClInclude Include="src\DronengineOG\initialization.h" />
     <ClInclude Include="src\DronengineOG\Object.h" />
     <ClInclude Include="src\DronengineOG\OpenGL\ElementBuffer.h" />
@@ -98,6 +100,10 @@
     <ClInclude Include="src\DronengineOG\OpenGL\VertexBuffer.h" />
     <ClInclude Include="src\DronengineOG\OpenGL\Shader.h" />
     <ClInclude Include="src\DronengineOG\Renderer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="x64\Debug\fragment.glsl" />
+    <None Include="x64\Debug\vertex.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
