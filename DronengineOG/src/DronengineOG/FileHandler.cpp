@@ -1,4 +1,6 @@
 #include "FileHandler.h"
+#define STB_IMAGE_IMPLEMENTATION
+#include "stb_image.h"
 
 namespace DronengineOG{
 
@@ -61,5 +63,11 @@ namespace DronengineOG{
 	void FileHandler::SetPath(std::string str)
 	{
 		this->path = str;
+	}
+
+	unsigned char* FileHandler::ImageToData(std::string path, int* width, int* height, int* channels)
+	{
+		unsigned char* data = stbi_load(path.c_str(), width, height, channels, 0);
+		return data;
 	}
 }

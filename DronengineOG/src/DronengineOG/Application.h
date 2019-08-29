@@ -1,5 +1,4 @@
 #pragma once
-#include "Application.h"
 #include "initialization.h"
 
 namespace DronengineOG {

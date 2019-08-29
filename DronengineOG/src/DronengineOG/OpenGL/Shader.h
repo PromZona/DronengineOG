@@ -13,6 +13,9 @@ namespace DronengineOG {
 		void DeleteProgram();
 		void Compile();
 		int GetShaderID();
+		void setUniformBool(const std::string& name, bool value);
+		void setUniformInt(const std::string& name, int value);
+		void setUniformFloat(const std::string& name, float value);
 	private:
 		const GLchar* shader;
 		unsigned int shaderID;

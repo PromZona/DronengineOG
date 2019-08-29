@@ -48,6 +48,9 @@
     <ClCompile Include="src\DronengineOG\FileHandler.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="src\DronengineOG\Texture.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\DOG.h">
@@ -81,6 +84,12 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="src\DronengineOG\FileHandler.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependecies\stb_image\stb_image.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DronengineOG\Texture.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

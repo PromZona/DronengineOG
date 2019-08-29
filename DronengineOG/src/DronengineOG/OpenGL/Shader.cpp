@@ -52,6 +52,21 @@ namespace DronengineOG {
 		return this->shaderID;
 	}
 
+	void Shader::setUniformBool(const std::string& name, bool value)
+	{
+		glUniform1i(glGetUniformLocation(this->shaderID, name.c_str()), (int)value);
+	}
+
+	void Shader::setUniformInt(const std::string& name, int value)
+	{
+		glUniform1i(glGetUniformLocation(this->shaderID, name.c_str()), value);
+	}
+
+	void Shader::setUniformFloat(const std::string& name, float value)
+	{
+		glUniform1f(glGetUniformLocation(this->shaderID, name.c_str()), value);
+	}
+
 	int CreateShaderProgram(Shader* vertex, Shader* fragment)
 	{
 		vertex->CreateProgram(GL_VERTEX_SHADER);

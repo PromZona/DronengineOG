@@ -14,6 +14,19 @@ public:
 	}
 };
 
+class MyObject : public DronengineOG::Object
+{
+public:
+	MyObject()
+	{
+
+	}
+	~MyObject()
+	{
+
+	}
+};
+
 DronengineOG::Application* DronengineOG::CreateApplication()
 {
 	return new SandBox();
