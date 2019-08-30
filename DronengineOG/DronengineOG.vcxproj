@@ -82,6 +82,7 @@
     <ClCompile Include="src\DronengineOG\FileHandler.cpp" />
     <ClCompile Include="src\DronengineOG\initialization.cpp" />
     <ClCompile Include="src\DronengineOG\Object.cpp" />
+    <ClCompile Include="src\DronengineOG\ObjectHandler.cpp" />
     <ClCompile Include="src\DronengineOG\OpenGL\ElementBuffer.cpp" />
     <ClCompile Include="src\DronengineOG\OpenGL\VertexArray.cpp" />
     <ClCompile Include="src\DronengineOG\OpenGL\VertexBuffer.cpp" />
@@ -97,6 +98,7 @@
     <ClInclude Include="src\DronengineOG\FileHandler.h" />
     <ClInclude Include="src\DronengineOG\initialization.h" />
     <ClInclude Include="src\DronengineOG\Object.h" />
+    <ClInclude Include="src\DronengineOG\ObjectHandler.h" />
     <ClInclude Include="src\DronengineOG\OpenGL\ElementBuffer.h" />
     <ClInclude Include="src\DronengineOG\OpenGL\VertexArray.h" />
     <ClInclude Include="src\DronengineOG\OpenGL\VertexBuffer.h" />

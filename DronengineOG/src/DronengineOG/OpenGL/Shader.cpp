@@ -2,6 +2,12 @@
 
 namespace DronengineOG {
 
+	Shader::Shader()
+	{
+		this->shader = "";
+		this->shaderID = 0;
+	}
+
 	Shader::Shader(const GLchar** shader)
 	{
 		this->shader = *shader;

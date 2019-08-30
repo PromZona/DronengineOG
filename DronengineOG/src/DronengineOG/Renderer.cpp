@@ -55,4 +55,22 @@ namespace DronengineOG {
 		glfwSwapBuffers(this->OpenGLinit->window);
 		glfwPollEvents();
 	}
+
+	void Renderer::Draw(std::vector<Object*> collection)
+	{
+		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+		glClear(GL_COLOR_BUFFER_BIT);
+		for (int i = 0; i < collection.size(); i++)
+		{
+			if (collection[i]->GetShaderID() == 0)
+			{
+				collection[i]->SetShaderID(CreateShaderProgram(collection[i]->GetVertexShader(), collection[i]->GetFragmentShader()));
+			}
+			glUseProgram(collection[i]->GetShaderID());
+			VAO = new VertexArray();
+			VAO->Bind(); // TODO: Дописать рендер. Разобраться с BAO, EAO и Подключением атрибутов
+		}
+		glfwSwapBuffers(this->OpenGLinit->window);
+		glfwPollEvents();
+	}
 }

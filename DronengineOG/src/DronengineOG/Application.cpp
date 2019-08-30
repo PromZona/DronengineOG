@@ -1,5 +1,6 @@
 #include "Application.h"
 #include "Renderer.h"
+#include "ObjectHandler.h"
 
 namespace DronengineOG {
 
@@ -23,9 +24,15 @@ namespace DronengineOG {
 	void Application::Run()
 	{
 		Renderer* render = new Renderer(this->OpenGLHandler);
+		ObjectHandler* ObjHandler = new ObjectHandler();
+
 		while (is_running)
 		{
+			ObjHandler->Update();
 			render->Update();
 		}
+
+		delete render;
+		delete ObjHandler;
 	}
 }

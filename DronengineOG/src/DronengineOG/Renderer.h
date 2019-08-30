@@ -4,6 +4,7 @@
 #include "Object.h"
 #include "FileHandler.h"
 
+
 #include "OpenGL/Shader.h"
 #include "OpenGL/VertexArray.h"
 #include "OpenGL/VertexBuffer.h"
@@ -17,9 +18,10 @@ namespace DronengineOG {
 		~Renderer();
 
 		void Update();
+		void Draw(std::vector<Object*> collection);
 
 	private:
-		int shader;
+		int shader; // Must be Unsigned
 		Initialization* OpenGLinit;
 		VertexArray* VAO;
 		VertexBuffer* BAO;
