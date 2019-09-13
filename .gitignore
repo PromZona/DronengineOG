@@ -1,3 +1,7 @@
 /.vs/*
 *.ipch
 *.db
+*.suo
+*.sln
+*.vcxproj*
+/x64/*
