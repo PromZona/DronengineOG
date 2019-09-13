@@ -5,3 +5,6 @@
 *.sln
 *.vcxproj*
 /x64/*
+/v16/*
+DronengineOG/.vs/DronengineOG/v16/.suo
+DronengineOG/.vs/DronengineOG/v16/.suo
