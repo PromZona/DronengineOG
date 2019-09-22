@@ -1,3 +1,2 @@
 ﻿  main.cpp
-MSVCRTD.lib(initializers.obj) : warning LNK4098: библиотека по умолчанию "msvcrt.lib" противоречит использованию других библиотек; используйте параметр /NODEFAULTLIB:library
-  SandBox.vcxproj -> E:\ProjectsPZ\DronengineOG\DronengineOG\x64\Debug\SandBox.exe
+  SandBox.vcxproj -> D:\ProjectsPZ\EnginePZ\DronengineOG\DronengineOG\x64\Debug\SandBox.exe

@@ -1,16 +1,3 @@
-﻿  glad.c
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\shared\minwindef.h(130,1): warning C4005:  APIENTRY: изменение макроопределения
-E:\ProjectsPZ\DronengineOG\DronengineOG\Dependecies\GLAD\include\glad\glad.h(32): message :  см. предыдущее определение "APIENTRY"
-  Application.cpp
-  EntryPoint.h
-  FileHandler.cpp
-  initialization.cpp
-  Object.cpp
-  ElementBuffer.cpp
-  VertexArray.cpp
-  VertexBuffer.cpp
-  Shader.cpp
-  Renderer.cpp
-  Texture.cpp
-  Создание кода...
-  DronengineOG.vcxproj -> E:\ProjectsPZ\DronengineOG\DronengineOG\x64\Debug\DronengineOG.lib
+﻿  Renderer.cpp
+D:\ProjectsPZ\EnginePZ\DronengineOG\DronengineOG\src\DronengineOG\Renderer.cpp(60,87): warning C4267:  аргумент: преобразование из "size_t" в "GLsizei"; возможна потеря данных
+  DronengineOG.vcxproj -> D:\ProjectsPZ\EnginePZ\DronengineOG\DronengineOG\x64\Debug\DronengineOG.lib

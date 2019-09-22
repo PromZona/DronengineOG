@@ -9,11 +9,10 @@ namespace DronengineOG
 	public:
 		ObjectHandler();
 		~ObjectHandler();
-		static void Update();
-		static void AddObject(Object* obj);
-		static void DeleteObject(Object* obj);
-	private:
-		static std::vector<DronengineOG::Object*> ObjectsCollection;
+		void Update();
+		void AddObject(Object* obj);
+		void DeleteObject(Object* obj);
+		std::vector<DronengineOG::Object*> ObjectsCollection;
 	};
 
 }

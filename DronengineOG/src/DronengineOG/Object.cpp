@@ -78,4 +78,8 @@ namespace DronengineOG {
 		return this->fragmentShader;
 	}
 
+	void Object::Update() 
+	{
+
+	}
 }

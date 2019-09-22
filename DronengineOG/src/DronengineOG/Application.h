@@ -1,5 +1,7 @@
 #pragma once
 #include "initialization.h"
+#include "Renderer.h"
+#include "ObjectHandler.h"
 
 namespace DronengineOG {
 
@@ -9,10 +11,14 @@ namespace DronengineOG {
 		Application();
 		virtual ~Application();
 		virtual void Run();
+		virtual void UserUpdate();
+		virtual void UserStart(ObjectHandler* h);
 		void initOpenGLHandler(int windowWidth, int windowHeight, const char* windowName);
-	private:
+	protected:
 		bool is_running;
 		Initialization* OpenGLHandler;
+		Renderer* render;
+		ObjectHandler* ObjHandler;
 	};
 
 	Application* CreateApplication();

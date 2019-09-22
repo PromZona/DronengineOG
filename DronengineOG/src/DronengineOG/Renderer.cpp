@@ -13,22 +13,6 @@ namespace DronengineOG {
 
 		VAO->Bind();
 
-		Object* first = new Object();
-		std::vector<float> vertices = {
-			0.5f,  0.5f, 0.0f,  // top right
-			0.5f, -0.5f, 0.0f,  // bottom right
-			-0.5f, -0.5f, 0.0f,  // bottom left
-			-0.5f,  0.5f, 0.0f   // top left 
-		};
-		std::vector<unsigned int> indices = {  // note that we start from 0!
-			0, 1, 3,   // first triangle
-			1, 2, 3    // second triangle
-		};
-		first->SetIndices(indices);
-		first->SetVertices(vertices);
-		BAO->Bind(first);
-		EAO->Bind(first);
-
 		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
 		glEnableVertexAttribArray(0);
 		BAO->UnBind();
@@ -62,13 +46,18 @@ namespace DronengineOG {
 		glClear(GL_COLOR_BUFFER_BIT);
 		for (int i = 0; i < collection.size(); i++)
 		{
+			glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+			glEnableVertexAttribArray(0);
+			BAO->UnBind();
+			BAO->Bind(collection[i]);
+			EAO->Bind(collection[i]);
 			if (collection[i]->GetShaderID() == 0)
 			{
 				collection[i]->SetShaderID(CreateShaderProgram(collection[i]->GetVertexShader(), collection[i]->GetFragmentShader()));
 			}
 			glUseProgram(collection[i]->GetShaderID());
-			VAO = new VertexArray();
 			VAO->Bind(); // TODO: Дописать рендер. Разобраться с BAO, EAO и Подключением атрибутов
+			glDrawElements(GL_TRIANGLES, collection[i]->GetIndices().size(), GL_UNSIGNED_INT, 0);
 		}
 		glfwSwapBuffers(this->OpenGLinit->window);
 		glfwPollEvents();
