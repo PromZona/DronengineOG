@@ -1,3 +1,4 @@
-﻿  main.cpp
-MSVCRTD.lib(initializers.obj) : warning LNK4098: библиотека по умолчанию "msvcrt.lib" противоречит использованию других библиотек; используйте параметр /NODEFAULTLIB:library
-  SandBox.vcxproj -> E:\ProjectsPZ\DronengineOG\DronengineOG\x64\Debug\SandBox.exe
+﻿MSVCRTD.lib(initializers.obj) : warning LNK4098: библиотека по умолчанию "msvcrt.lib" противоречит использованию других библиотек; используйте параметр /NODEFAULTLIB:library
+DronengineOG.lib(ObjectHandler.obj) : error LNK2001: неразрешенный внешний символ ""private: static class std::vector<class DronengineOG::Object *,class std::allocator<class DronengineOG::Object *> > DronengineOG::ObjectHandler::ObjectsCollection" (?ObjectsCollection@ObjectHandler@DronengineOG@@0V?$vector@PEAVObject@DronengineOG@@V?$allocator@PEAVObject@DronengineOG@@@std@@@std@@A)"
+DronengineOG.lib(Object.obj) : error LNK2001: неразрешенный внешний символ ""public: virtual void __cdecl DronengineOG::Object::Update(void)" (?Update@Object@DronengineOG@@UEAAXXZ)"
+E:\ProjectsPZ\DronengineOG\DronengineOG\x64\Debug\SandBox.exe : fatal error LNK1120: неразрешенных внешних элементов: 2
